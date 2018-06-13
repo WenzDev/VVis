@@ -1,0 +1,5 @@
+# frequency = indexMax * Fs / L;
+# where:
+# indexMax - index of the maximum in power spectrum;
+# Fs - sampling rate of an audio file;
+# L - length of the power spectrum array.

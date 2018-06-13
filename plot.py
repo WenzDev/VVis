@@ -3,6 +3,7 @@ import numpy as np
 import pylab
 import time
 
+
 RATE = 44100
 CHUNK = int(RATE/20) # RATE / number of updates per second
 
