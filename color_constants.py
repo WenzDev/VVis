@@ -12,7 +12,6 @@ class RGB(Color):
         return '#{:02X}{:02X}{:02X}'.format(self.red,self.green,self.blue)
 
 
-#Color Contants
 ALICEBLUE = RGB(240, 248, 255)
 ANTIQUEWHITE = RGB(250, 235, 215)
 ANTIQUEWHITE1 = RGB(255, 239, 219)
