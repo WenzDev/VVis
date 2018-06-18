@@ -1243,7 +1243,7 @@ color_library = {
     (6841.60, 7247.36): RGB[ORANGE],  # A8
     (7248.64, 7678.72): RGB[YELLOW2],  # A#8
     (7680.00, 8135.68): RGB[LIMEGREEN],  # B8
-
+ # this is new
 
 }
 
