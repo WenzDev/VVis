@@ -13,6 +13,7 @@ METHOD = "default"
 SAMPLE_RATE = 44100
 HOP_SIZE = BUFFER_SIZE//2
 PERIOD_SIZE_IN_FRAME = HOP_SIZE
+# new shit
 
 
 def main(args):
