@@ -7,7 +7,7 @@ import aubio
 
 BUFFER_SIZE = 2048
 RATE = 44100
-CHUNK = int(RATE/20) # RATE / number of updates per second
+CHUNK = int(RATE/20)  # RATE / number of updates per second
 HOP_SIZE = BUFFER_SIZE//2
 PERIOD_SIZE_IN_FRAME = HOP_SIZE
 METHOD = "default"
