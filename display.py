@@ -3,6 +3,7 @@ from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
 import random
+from pitch import main
 
 vertices = (
     (1, -1, -1),
@@ -130,14 +131,6 @@ def Cubes(new_vertices):
             glVertex3fv(new_vertices[vertex])
 
     glEnd()
-
-
-# CUT LINES BC THEY HURT PROCESSING
-##    glBegin(GL_LINES)
-##    for edge in edges:
-##        for vertex in edge:
-##            glVertex3fv(new_vertices[vertex])
-##    glEnd()
 
 
 def main():

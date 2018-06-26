@@ -11,10 +11,9 @@ METHOD = "default"
 SAMPLE_RATE = 44100
 HOP_SIZE = BUFFER_SIZE//2
 PERIOD_SIZE_IN_FRAME = HOP_SIZE
-# new shit
-    #faf
 
-def main(args):
+
+def pitch_tocolor(args):
 
     # Initiating PyAudio object.
     pA = pyaudio.PyAudio()
@@ -32,7 +31,6 @@ def main(args):
     # as a silence.
     pDetection.set_silence(-40)
 
-    # Infinite loop!
     while True:
 
         # Always listening to the microphone.
@@ -168,7 +166,9 @@ def pitch_detection(pitch):
     for index, key in enumerate(colordict):
         if pitch > key[0] and pitch < key[1]:
             return colordict[key]
+        if pitch < key[0]:
+            return None
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    pitch_tocolor(sys.argv)
