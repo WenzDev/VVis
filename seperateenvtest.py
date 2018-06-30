@@ -4,6 +4,7 @@ import pygame
 from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
+from OpenGL.GLUT import *
 from multiprocessing import Process
 
 p = pyaubio()
@@ -101,7 +102,6 @@ if __name__ == "__main__":
     p1.start()
     p2 = Process(target=p2c.main(sys.argv))
     p2.start()
-    p3 = Process(target=)
     p1.join()
     p2.join()
 
