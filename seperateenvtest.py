@@ -6,7 +6,7 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 from multiprocessing import Process
-
+# creating an instance of my class
 p = pyaubio()
 
 verticies = (
@@ -63,6 +63,7 @@ def Cube():
     glBegin(GL_QUADS)
     for surface in surfaces:
         for vertex in surface:
+            # what it's doing here is taking each individual float from the current_color vector and dividing it to float point values
             glColor3f(current_color[0] / 255.0, current_color[1] / 255.0, current_color[2] / 255.0)
             glVertex3fv(verticies[vertex])
     glEnd()
@@ -90,6 +91,7 @@ def vvis_graphics():
                 quit()
 
         glRotatef(1, 3, 1, 1)
+        # here is where I'm clearing and redrawing?
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
         Cube()
         pygame.display.flip()
