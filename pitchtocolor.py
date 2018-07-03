@@ -4,7 +4,7 @@ import pyaudio
 import sys
 from color_constants import *
 
-# this class initilializes pyaudio (for real-time audio input from a default audio device: i.e: microphone)
+# class for PyAudio
 class pyaubio():
     def __init__(self):
         self.BUFFER_SIZE = 2048
@@ -15,7 +15,7 @@ class pyaubio():
         self.HOP_SIZE = self.BUFFER_SIZE // 2
         self.PERIOD_SIZE_IN_FRAME = self.HOP_SIZE
         self.current_color = (70, 100, 120)
-# the main initilializes Aubio (audio analysis module) using PyAudio as the input
+# initialize aubio to detect pitch
     def main(self, args):
         # Initiating PyAudio object.
         pA = pyaudio.PyAudio()
@@ -48,8 +48,7 @@ class pyaubio():
 
             # Finally print the pitch and the volume.
             print(str(pitch) + " " + str(volume) + " " + (str(self.current_color)))
-   #So basically, this dictionary reads the pitch variable (which is constantly being updated)
-   # and finds which color value the float (currently assigned to) the pitch variable matches with.
+    # Frequency to Color Dictionary
     def pitch_detection(self, pitch):
         colordict = {
             (14.0, 16.75): GREEN,  # C0
@@ -168,13 +167,9 @@ class pyaubio():
                 return colordict[key]
             if pitch < key[0]:
                 return None
-    # This is what the console looks like when the print statement on line 50 is run
-    # 334.06213 0.07501615583896637 (155, 48, 255)
-    # pitch     Volume              current_color (that has been converted to RGB vector)
-    # getter for current_color variable
     def getcc(self):
         return self.current_color
-    # all of these are getters BS
+    # Get Buffer Size
     def getBufferSize(self):
         return self.BUFFER_SIZE
     # Gets Channel
