@@ -1,4 +1,4 @@
-from seperateenvpitch import *
+from pitchtocolor import *
 import sys
 import pygame
 from pygame.locals import *
